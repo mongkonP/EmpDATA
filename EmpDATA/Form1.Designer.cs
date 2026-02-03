@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dB = new EmpDATA.DATA.DB();
-            this.tblAttendanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblAttendanceTableAdapter = new EmpDATA.DATA.DBTableAdapters.tblAttendanceTableAdapter();
+            this.tblShiftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblShiftTableAdapter = new EmpDATA.DATA.DBTableAdapters.tblShiftTableAdapter();
             this.tableAdapterManager = new EmpDATA.DATA.DBTableAdapters.TableAdapterManager();
-            this.tblAttendanceBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.tblShiftBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,27 +46,17 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.tblAttendanceBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.tblAttendanceDataGridView = new System.Windows.Forms.DataGridView();
+            this.tblShiftBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.tblShiftDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceBindingNavigator)).BeginInit();
-            this.tblAttendanceBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingNavigator)).BeginInit();
+            this.tblShiftBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // dB
@@ -74,30 +64,31 @@
             this.dB.DataSetName = "DB";
             this.dB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblAttendanceBindingSource
+            // tblShiftBindingSource
             // 
-            this.tblAttendanceBindingSource.DataMember = "tblAttendance";
-            this.tblAttendanceBindingSource.DataSource = this.dB;
+            this.tblShiftBindingSource.DataMember = "tblShift";
+            this.tblShiftBindingSource.DataSource = this.dB;
             // 
-            // tblAttendanceTableAdapter
+            // tblShiftTableAdapter
             // 
-            this.tblAttendanceTableAdapter.ClearBeforeFill = true;
+            this.tblShiftTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.tblAttendanceTableAdapter = this.tblAttendanceTableAdapter;
+            this.tableAdapterManager.tblAttendanceTableAdapter = null;
+            this.tableAdapterManager.tblEmployee1TableAdapter = null;
             this.tableAdapterManager.tblEmployeeTableAdapter = null;
-            this.tableAdapterManager.tblShiftTableAdapter = null;
+            this.tableAdapterManager.tblShiftTableAdapter = this.tblShiftTableAdapter;
             this.tableAdapterManager.UpdateOrder = EmpDATA.DATA.DBTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tblAttendanceBindingNavigator
+            // tblShiftBindingNavigator
             // 
-            this.tblAttendanceBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.tblAttendanceBindingNavigator.BindingSource = this.tblAttendanceBindingSource;
-            this.tblAttendanceBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tblAttendanceBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.tblAttendanceBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tblShiftBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.tblShiftBindingNavigator.BindingSource = this.tblShiftBindingSource;
+            this.tblShiftBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.tblShiftBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.tblShiftBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -109,17 +100,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.tblAttendanceBindingNavigatorSaveItem});
-            this.tblAttendanceBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.tblAttendanceBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tblAttendanceBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tblAttendanceBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tblAttendanceBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tblAttendanceBindingNavigator.Name = "tblAttendanceBindingNavigator";
-            this.tblAttendanceBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tblAttendanceBindingNavigator.Size = new System.Drawing.Size(800, 25);
-            this.tblAttendanceBindingNavigator.TabIndex = 0;
-            this.tblAttendanceBindingNavigator.Text = "bindingNavigator1";
+            this.tblShiftBindingNavigatorSaveItem});
+            this.tblShiftBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.tblShiftBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.tblShiftBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.tblShiftBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.tblShiftBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.tblShiftBindingNavigator.Name = "tblShiftBindingNavigator";
+            this.tblShiftBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.tblShiftBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.tblShiftBindingNavigator.TabIndex = 0;
+            this.tblShiftBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -206,141 +197,71 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // tblAttendanceBindingNavigatorSaveItem
+            // tblShiftBindingNavigatorSaveItem
             // 
-            this.tblAttendanceBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tblAttendanceBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblAttendanceBindingNavigatorSaveItem.Image")));
-            this.tblAttendanceBindingNavigatorSaveItem.Name = "tblAttendanceBindingNavigatorSaveItem";
-            this.tblAttendanceBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.tblAttendanceBindingNavigatorSaveItem.Text = "Save Data";
-            this.tblAttendanceBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblAttendanceBindingNavigatorSaveItem_Click);
+            this.tblShiftBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tblShiftBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblShiftBindingNavigatorSaveItem.Image")));
+            this.tblShiftBindingNavigatorSaveItem.Name = "tblShiftBindingNavigatorSaveItem";
+            this.tblShiftBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.tblShiftBindingNavigatorSaveItem.Text = "Save Data";
+            this.tblShiftBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblShiftBindingNavigatorSaveItem_Click);
             // 
-            // tblAttendanceDataGridView
+            // tblShiftDataGridView
             // 
-            this.tblAttendanceDataGridView.AutoGenerateColumns = false;
-            this.tblAttendanceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblAttendanceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tblShiftDataGridView.AutoGenerateColumns = false;
+            this.tblShiftDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblShiftDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.tblAttendanceDataGridView.DataSource = this.tblAttendanceBindingSource;
-            this.tblAttendanceDataGridView.Location = new System.Drawing.Point(47, 38);
-            this.tblAttendanceDataGridView.Name = "tblAttendanceDataGridView";
-            this.tblAttendanceDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.tblAttendanceDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn4});
+            this.tblShiftDataGridView.DataSource = this.tblShiftBindingSource;
+            this.tblShiftDataGridView.Location = new System.Drawing.Point(98, 91);
+            this.tblShiftDataGridView.Name = "tblShiftDataGridView";
+            this.tblShiftDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.tblShiftDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "AttendanceID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "AttendanceID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ShiftID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ShiftID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmployeeID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "EmployeeID";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "StartTime";
+            this.dataGridViewTextBoxColumn2.HeaderText = "StartTime";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "WorkDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "WorkDate";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "EndTime";
+            this.dataGridViewTextBoxColumn3.HeaderText = "EndTime";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ShiftID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ShiftID";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "WorkHours";
+            this.dataGridViewTextBoxColumn4.HeaderText = "WorkHours";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "CheckInTime";
-            this.dataGridViewTextBoxColumn5.HeaderText = "CheckInTime";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "CheckOutTime";
-            this.dataGridViewTextBoxColumn6.HeaderText = "CheckOutTime";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "WorkMinutes";
-            this.dataGridViewTextBoxColumn7.HeaderText = "WorkMinutes";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "LateMinutes";
-            this.dataGridViewTextBoxColumn8.HeaderText = "LateMinutes";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "EarlyLeaveMinutes";
-            this.dataGridViewTextBoxColumn9.HeaderText = "EarlyLeaveMinutes";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "OTMinutes";
-            this.dataGridViewTextBoxColumn10.HeaderText = "OTMinutes";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "WorkStatus";
-            this.dataGridViewTextBoxColumn11.HeaderText = "WorkStatus";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Remark";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Remark";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "ApprovedBy";
-            this.dataGridViewTextBoxColumn13.HeaderText = "ApprovedBy";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "ApprovedDate";
-            this.dataGridViewTextBoxColumn14.HeaderText = "ApprovedDate";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tblAttendanceDataGridView);
-            this.Controls.Add(this.tblAttendanceBindingNavigator);
+            this.Controls.Add(this.tblShiftDataGridView);
+            this.Controls.Add(this.tblShiftBindingNavigator);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceBindingNavigator)).EndInit();
-            this.tblAttendanceBindingNavigator.ResumeLayout(false);
-            this.tblAttendanceBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblAttendanceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingNavigator)).EndInit();
+            this.tblShiftBindingNavigator.ResumeLayout(false);
+            this.tblShiftBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,10 +270,10 @@
         #endregion
 
         private DATA.DB dB;
-        private System.Windows.Forms.BindingSource tblAttendanceBindingSource;
-        private DATA.DBTableAdapters.tblAttendanceTableAdapter tblAttendanceTableAdapter;
+        private System.Windows.Forms.BindingSource tblShiftBindingSource;
+        private DATA.DBTableAdapters.tblShiftTableAdapter tblShiftTableAdapter;
         private DATA.DBTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator tblAttendanceBindingNavigator;
+        private System.Windows.Forms.BindingNavigator tblShiftBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -364,21 +285,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tblAttendanceBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView tblAttendanceDataGridView;
+        private System.Windows.Forms.ToolStripButton tblShiftBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView tblShiftDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
     }
 }

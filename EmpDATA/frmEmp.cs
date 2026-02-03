@@ -25,6 +25,8 @@ namespace EmpDATA
 
         private void frmEmp_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB.tblEmployee1' table. You can move, or remove it, as needed.
+            this.tblEmployee1TableAdapter.Fill(this.dB.tblEmployee1);
             // TODO: This line of code loads data into the 'dB.tblShift' table. You can move, or remove it, as needed.
             this.tblShiftTableAdapter1.Fill(this.dB.tblShift);
             // TODO: This line of code loads data into the 'dB.tblEmployee' table. You can move, or remove it, as needed.
@@ -253,7 +255,7 @@ namespace EmpDATA
         private void toolStripButton8_Click(object sender, EventArgs e)
         {
             //tblAttendanceBindingSource.AddNew();
-            employeeIDTextBox.Focus();
+            cmbEmp.Focus();
         }
         //บันทึกข้อมูล
         private void toolStripButton14_Click(object sender, EventArgs e)
@@ -275,6 +277,24 @@ namespace EmpDATA
             int shiftID = Convert.ToInt32(val);
 
             tblShiftBindingSource1.Filter = $"ShiftID = {shiftID}";
+        }
+
+        private void tblEmployeeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tblEmployeeBindingSource.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.dB);
+            this.tblEmployeeTableAdapter.Fill(this.dB.tblEmployee);
+            MessageBox.Show("บันทึกข้อมูลเรียบร้อยแล้ว");
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tblShiftBindingSource.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.dB);
+            this.tblShiftTableAdapter1.Fill(this.dB.tblShift);
+            MessageBox.Show("บันทึกข้อมูลเรียบร้อยแล้ว");
         }
     }
 }

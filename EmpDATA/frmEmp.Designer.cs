@@ -62,10 +62,12 @@
             this.dB = new EmpDATA.DATA.DB();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cmbEmp = new System.Windows.Forms.ComboBox();
+            this.tblEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.workHoursTextBox = new System.Windows.Forms.TextBox();
-            this.tblShiftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblShiftBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.endTimeTextBox = new System.Windows.Forms.TextBox();
             this.startTimeTextBox = new System.Windows.Forms.TextBox();
             this.lateMinutesTextBox = new System.Windows.Forms.TextBox();
@@ -74,10 +76,10 @@
             this.checkInTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.shiftIDTextBox = new System.Windows.Forms.TextBox();
             this.workDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.employeeIDTextBox = new System.Windows.Forms.TextBox();
             this.attendanceIDTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
             this.txtEmpID_Find = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,11 +87,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tblEmployeeDataGridView = new System.Windows.Forms.DataGridView();
             this.employeeIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,49 +110,43 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resignDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isActiveDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.tblEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblEmployeeBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tblEmployeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tblShiftDataGridView = new System.Windows.Forms.DataGridView();
             this.shiftIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblShiftBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.tblAttendanceTableAdapter = new EmpDATA.DATA.DBTableAdapters.tblAttendanceTableAdapter();
             this.tblEmployeeTableAdapter = new EmpDATA.DATA.DBTableAdapters.tblEmployeeTableAdapter();
             this.tableAdapterManager1 = new EmpDATA.DATA.DBTableAdapters.TableAdapterManager();
             this.tblShiftTableAdapter1 = new EmpDATA.DATA.DBTableAdapters.tblShiftTableAdapter();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.tblEmployeeBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.tblShiftBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblEmployee1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblEmployee1TableAdapter = new EmpDATA.DATA.DBTableAdapters.tblEmployee1TableAdapter();
             attendanceIDLabel = new System.Windows.Forms.Label();
             employeeIDLabel = new System.Windows.Forms.Label();
             workDateLabel = new System.Windows.Forms.Label();
@@ -163,21 +165,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.dB)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingNavigator)).BeginInit();
             this.tblEmployeeBindingNavigator.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblShiftDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployee1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // attendanceIDLabel
@@ -455,6 +458,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cmbEmp);
             this.groupBox2.Controls.Add(this.statusStrip1);
             this.groupBox2.Controls.Add(workHoursLabel);
             this.groupBox2.Controls.Add(this.workHoursTextBox);
@@ -475,7 +479,6 @@
             this.groupBox2.Controls.Add(workDateLabel);
             this.groupBox2.Controls.Add(this.workDateDateTimePicker);
             this.groupBox2.Controls.Add(employeeIDLabel);
-            this.groupBox2.Controls.Add(this.employeeIDTextBox);
             this.groupBox2.Controls.Add(attendanceIDLabel);
             this.groupBox2.Controls.Add(this.attendanceIDTextBox);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -485,6 +488,23 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "เพิ่ม/แก้ไข";
+            // 
+            // cmbEmp
+            // 
+            this.cmbEmp.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblAttendanceBindingSource, "EmployeeID", true));
+            this.cmbEmp.DataSource = this.tblEmployee1BindingSource;
+            this.cmbEmp.DisplayMember = "empName";
+            this.cmbEmp.FormattingEnabled = true;
+            this.cmbEmp.Location = new System.Drawing.Point(93, 44);
+            this.cmbEmp.Name = "cmbEmp";
+            this.cmbEmp.Size = new System.Drawing.Size(212, 21);
+            this.cmbEmp.TabIndex = 23;
+            this.cmbEmp.ValueMember = "EmployeeID";
+            // 
+            // tblEmployeeBindingSource
+            // 
+            this.tblEmployeeBindingSource.DataMember = "tblEmployee";
+            this.tblEmployeeBindingSource.DataSource = this.dB;
             // 
             // statusStrip1
             // 
@@ -511,10 +531,10 @@
             this.workHoursTextBox.Size = new System.Drawing.Size(100, 20);
             this.workHoursTextBox.TabIndex = 21;
             // 
-            // tblShiftBindingSource
+            // tblShiftBindingSource1
             // 
-            this.tblShiftBindingSource.DataMember = "tblShift";
-            this.tblShiftBindingSource.DataSource = this.dB;
+            this.tblShiftBindingSource1.DataMember = "tblShift";
+            this.tblShiftBindingSource1.DataSource = this.dB;
             // 
             // endTimeTextBox
             // 
@@ -585,14 +605,6 @@
             this.workDateDateTimePicker.Size = new System.Drawing.Size(100, 20);
             this.workDateDateTimePicker.TabIndex = 5;
             // 
-            // employeeIDTextBox
-            // 
-            this.employeeIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblAttendanceBindingSource, "EmployeeID", true));
-            this.employeeIDTextBox.Location = new System.Drawing.Point(93, 45);
-            this.employeeIDTextBox.Name = "employeeIDTextBox";
-            this.employeeIDTextBox.Size = new System.Drawing.Size(100, 20);
-            this.employeeIDTextBox.TabIndex = 3;
-            // 
             // attendanceIDTextBox
             // 
             this.attendanceIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tblAttendanceBindingSource, "AttendanceID", true));
@@ -629,6 +641,17 @@
             this.button1.Text = "Add Test DATA";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnFind
+            // 
+            this.btnFind.BackgroundImage = global::EmpDATA.Properties.Resources.search32x32;
+            this.btnFind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFind.Location = new System.Drawing.Point(506, 21);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(41, 31);
+            this.btnFind.TabIndex = 6;
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtEmpID_Find
             // 
@@ -715,12 +738,40 @@
             this.bindingNavigator2.TabIndex = 3;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "Add new";
+            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
+            // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(35, 22);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "Move first";
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "Move previous";
             // 
             // toolStripSeparator4
             // 
@@ -731,6 +782,7 @@
             // 
             this.toolStripTextBox2.AccessibleName = "Position";
             this.toolStripTextBox2.AutoSize = false;
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox2.Text = "0";
@@ -741,10 +793,37 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "Move next";
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton13.Text = "Move last";
+            // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton14
+            // 
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton14.Text = "Save Data";
+            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
             // tabPage1
             // 
@@ -841,11 +920,6 @@
             this.isActiveDataGridViewCheckBoxColumn.HeaderText = "IsActive";
             this.isActiveDataGridViewCheckBoxColumn.Name = "isActiveDataGridViewCheckBoxColumn";
             // 
-            // tblEmployeeBindingSource
-            // 
-            this.tblEmployeeBindingSource.DataMember = "tblEmployee";
-            this.tblEmployeeBindingSource.DataSource = this.dB;
-            // 
             // tblEmployeeBindingNavigator
             // 
             this.tblEmployeeBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -875,12 +949,39 @@
             this.tblEmployeeBindingNavigator.TabIndex = 2;
             this.tblEmployeeBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
@@ -891,6 +992,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -901,10 +1003,37 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tblEmployeeBindingNavigatorSaveItem
+            // 
+            this.tblEmployeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tblEmployeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblEmployeeBindingNavigatorSaveItem.Image")));
+            this.tblEmployeeBindingNavigatorSaveItem.Name = "tblEmployeeBindingNavigatorSaveItem";
+            this.tblEmployeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.tblEmployeeBindingNavigatorSaveItem.Text = "Save Data";
+            this.tblEmployeeBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblEmployeeBindingNavigatorSaveItem_Click);
             // 
             // tabPage2
             // 
@@ -959,6 +1088,11 @@
             this.workHoursDataGridViewTextBoxColumn.HeaderText = "WorkHours";
             this.workHoursDataGridViewTextBoxColumn.Name = "workHoursDataGridViewTextBoxColumn";
             // 
+            // tblShiftBindingSource
+            // 
+            this.tblShiftBindingSource.DataMember = "tblShift";
+            this.tblShiftBindingSource.DataSource = this.dB;
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.toolStripButton1;
@@ -988,176 +1122,6 @@
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(35, 22);
-            this.toolStripLabel1.Text = "of {0}";
-            this.toolStripLabel1.ToolTipText = "Total number of items";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tblAttendanceTableAdapter
-            // 
-            this.tblAttendanceTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblEmployeeTableAdapter
-            // 
-            this.tblEmployeeTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.tblAttendanceTableAdapter = this.tblAttendanceTableAdapter;
-            this.tableAdapterManager1.tblEmployeeTableAdapter = this.tblEmployeeTableAdapter;
-            this.tableAdapterManager1.tblShiftTableAdapter = this.tblShiftTableAdapter1;
-            this.tableAdapterManager1.UpdateOrder = EmpDATA.DATA.DBTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // tblShiftTableAdapter1
-            // 
-            this.tblShiftTableAdapter1.ClearBeforeFill = true;
-            // 
-            // btnFind
-            // 
-            this.btnFind.BackgroundImage = global::EmpDATA.Properties.Resources.search32x32;
-            this.btnFind.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnFind.Location = new System.Drawing.Point(506, 21);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(41, 31);
-            this.btnFind.TabIndex = 6;
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "Add new";
-            this.toolStripButton8.Click += new System.EventHandler(this.toolStripButton8_Click);
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton10.Text = "Move first";
-            // 
-            // toolStripButton11
-            // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton11.Text = "Move previous";
-            // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton12.Text = "Move next";
-            // 
-            // toolStripButton13
-            // 
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton13.Text = "Move last";
-            // 
-            // toolStripButton14
-            // 
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton14.Text = "Save Data";
-            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // tblEmployeeBindingNavigatorSaveItem
-            // 
-            this.tblEmployeeBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tblEmployeeBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblEmployeeBindingNavigatorSaveItem.Image")));
-            this.tblEmployeeBindingNavigatorSaveItem.Name = "tblEmployeeBindingNavigatorSaveItem";
-            this.tblEmployeeBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.tblEmployeeBindingNavigatorSaveItem.Text = "Save Data";
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1166,6 +1130,13 @@
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "Add new";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(35, 22);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
             // toolStripButton3
             // 
@@ -1185,6 +1156,26 @@
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton4.Text = "Move previous";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1203,6 +1194,11 @@
             this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton6.Text = "Move last";
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripButton7
             // 
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1210,11 +1206,37 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton7.Text = "Save Data";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
-            // tblShiftBindingSource1
+            // tblAttendanceTableAdapter
             // 
-            this.tblShiftBindingSource1.DataMember = "tblShift";
-            this.tblShiftBindingSource1.DataSource = this.dB;
+            this.tblAttendanceTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblEmployeeTableAdapter
+            // 
+            this.tblEmployeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.tblAttendanceTableAdapter = this.tblAttendanceTableAdapter;
+            this.tableAdapterManager1.tblEmployee1TableAdapter = null;
+            this.tableAdapterManager1.tblEmployeeTableAdapter = this.tblEmployeeTableAdapter;
+            this.tableAdapterManager1.tblShiftTableAdapter = this.tblShiftTableAdapter1;
+            this.tableAdapterManager1.UpdateOrder = EmpDATA.DATA.DBTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // tblShiftTableAdapter1
+            // 
+            this.tblShiftTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tblEmployee1BindingSource
+            // 
+            this.tblEmployee1BindingSource.DataMember = "tblEmployee1";
+            this.tblEmployee1BindingSource.DataSource = this.dB;
+            // 
+            // tblEmployee1TableAdapter
+            // 
+            this.tblEmployee1TableAdapter.ClearBeforeFill = true;
             // 
             // frmEmp
             // 
@@ -1237,9 +1259,10 @@
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
@@ -1248,17 +1271,17 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployeeBindingNavigator)).EndInit();
             this.tblEmployeeBindingNavigator.ResumeLayout(false);
             this.tblEmployeeBindingNavigator.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblShiftDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblShiftBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblEmployee1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1367,7 +1390,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn approvedByDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn approvedDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DateTimePicker workDateDateTimePicker;
-        private System.Windows.Forms.TextBox employeeIDTextBox;
         private System.Windows.Forms.TextBox attendanceIDTextBox;
         private System.Windows.Forms.TextBox workHoursTextBox;
         private System.Windows.Forms.TextBox endTimeTextBox;
@@ -1381,5 +1403,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.BindingSource tblShiftBindingSource1;
+        private System.Windows.Forms.ComboBox cmbEmp;
+        private System.Windows.Forms.BindingSource tblEmployee1BindingSource;
+        private DATA.DBTableAdapters.tblEmployee1TableAdapter tblEmployee1TableAdapter;
     }
 }

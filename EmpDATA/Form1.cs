@@ -17,18 +17,23 @@ namespace EmpDATA
             InitializeComponent();
         }
 
-        private void tblAttendanceBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tblAttendanceBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dB);
-
-        }
+   
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB.tblAttendance' table. You can move, or remove it, as needed.
-            this.tblAttendanceTableAdapter.Fill(this.dB.tblAttendance);
+            // TODO: This line of code loads data into the 'dB.tblShift' table. You can move, or remove it, as needed.
+          
+
+
+
+        }
+
+        private void tblShiftBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tblShiftBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dB);
+            this.tblShiftTableAdapter.Fill(this.dB.tblShift);
 
         }
     }
